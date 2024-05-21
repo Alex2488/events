@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register for Event</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-6">
+<h1 class="text-4xl font-bold text-center mb-8">Register for Event</h1>
+<div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
+  <form id="registrationForm">
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="fullName">Full Name</label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="fullName" type="text" placeholder="Full Name">
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email">
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="dob">Date of Birth</label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="dob" type="date">
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2">Where did you hear about this event?</label>
+      <div class="flex justify-between items-center space-x-4">
+        <div class="flex items-center">
+          <input id="source_social" type="radio" name="source" checked value="social" class="source mr-2 leading-tight">
+          <label for="source_social" class="text-gray-700">Social media</label>
+        </div>
+        <div class="flex items-center">
+          <input id="source_friends" type="radio" name="source" value="friends" class="source mr-2 leading-tight">
+          <label for="source_friends" class="text-gray-700">Friends</label>
+        </div>
+        <div class="flex items-center">
+          <input id="source_found" type="radio" name="source" value="found" class="source mr-2 leading-tight">
+          <label for="source_found" class="text-gray-700">Found myself</label>
+        </div>
+      </div>
+    </div>
+    <div class="flex items-center justify-between">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="registerParticipant()">Register</button>
+    </div>
+  </form>
+</div>
+<script src="js/register.js" defer></script>
+</body>
+</html>
